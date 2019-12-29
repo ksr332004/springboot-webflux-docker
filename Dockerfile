@@ -1,6 +1,5 @@
 FROM openjdk:11-jdk
 
-COPY ./springboot /springboot
-WORKDIR /springboot
-
-CMD ["./gradlew", "bootRun"]
+RUN mkdir /app
+ARG JAR_FILE=build/libs/app-was.jar
+COPY ${JAR_FILE} /app

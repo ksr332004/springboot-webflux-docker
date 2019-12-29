@@ -38,3 +38,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+bootJar {
+    mainClassName = 'com.example.webflux.WebfluxApplication'
+    archiveFileName = 'app-was.jar'
+}
